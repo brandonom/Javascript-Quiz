@@ -1,30 +1,30 @@
 var questions = [
     {
-        title: "question1",
+        title: "Which is NOT a variable ?",
         choices: [
-            "choice1", "choice2", "choice3", "choice4"
+            "var", "let", "div", "const"
         ],
-        answer: "choice2"
+        answer: "div"
     },
     {
-        title: "question2",
+        title: "How do you create a function?",
         choices: [
-            "choice1a", "choice2a", "choice3a", "choice4a"
+            "parameter", "do", "function", "return"
         ],
-        answer: "choice2"
+        answer: "function"
     },
     {
-        title: "question3",
+        title: "which is used to call a function ?",
         choices: [
-            "choice1b", "choice2b", "choice3b", "choice4b"
+            "return", "then", "element", "operator"
         ],
-        answer: "choice2"
+        answer: "operator"
     },
     {
-        title: "question4",
+        title: "Which is NOT proper javascript syntax",
         choices: [
-            "choice1c", "choice2c", "choice3c", "choice4c"
+            ,"integer", "string", "declare", "numbers"
         ],
-        answer: "choice2"
-    },
-]
+        answer: "declare"
+    }
+];

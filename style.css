@@ -9,14 +9,50 @@
 
 }
 
-body{
-    background: #001e4d;
-    color: #fff;
-
-}
-.container{
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: bisque;
+    color: black;
+  }
+  
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .start-screen, .question-box {
+    text-align: center;
+    width: 100%;
+    margin-top: -250px; 
+ 
     
-}
-.choices button {
+  }
 
-}
+  .choices button {
+    border: none;
+    border-radius: 12px;
+    padding: 10px 10px;
+    background-color: gray;
+    font-size: 24px;
+  }
+  
+ 
+  #Timer {
+    text-align: center;
+  }
+  
+  #button {
+    color: black;
+    border-radius: 12px;
+    border: none;
+    background-color: gray;
+    font-size: 24px;
+    padding: 10px 10px;
+  }
