@@ -3,7 +3,8 @@ var questionbox = document.querySelector(".question-box");
 var startscreen = document.querySelector(".start-screen");
 var qchoices = document.querySelector(".choices");
 var currentQuestionIndex = 0;
-var score = document.querySelector(".score-counter");
+var score = 0;
+var scoreElement = document.querySelector(".score-counter h4");
 var timeLeft = 60;
 var elem = document.getElementById('Timer');
 var timerId;
@@ -41,8 +42,8 @@ function checkAnswer(eventObject) {
         var buttonClicked = eventObject.target;
 
         if (buttonClicked.textContent === correctAnswer) {
-            var currentScore = parseInt(score.textContent) || 0;
-            score.textContent = currentScore + 1;
+           score++;
+           scoreElement.textContent = score;
         } else {
             timeLeft -= 5;
         }
@@ -54,11 +55,13 @@ function checkAnswer(eventObject) {
         } else {
             clearInterval(timerId);
             elem.innerHTML = "Quiz Completed";
+            // Depending on your needs, you might want to display final results or redirect the user to another page at this point.
+            // You might want to add a 'return;' statement here to exit the function or include other logic as required.
         }
     }
 }
 
-// Event listener for handling the click event on choices
+
 qchoices.addEventListener('click', function(event) {
     if (event.target.classList.contains('choice-btn')) {
         checkAnswer(event);
